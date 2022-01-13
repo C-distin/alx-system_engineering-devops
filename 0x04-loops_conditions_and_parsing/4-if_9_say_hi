@@ -6,11 +6,9 @@ index=0
 while [ "$index" -lt 10 ]
 do
     if [ "$index" -eq 9 ]
-        then
-            echo "Best School"
-            echo "Hi"
-        else
-            echo "Best School"
-        fi
-    (( index++ ))
+    then
+        echo "Hi"
+    fi
+    echo "Best School"
+        (( index++ ))
 done
