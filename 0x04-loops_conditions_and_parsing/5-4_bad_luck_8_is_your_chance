@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 # This script displays "Best School", "bad luck" for the 4th iteration and "good luck" for the 8th iteration
 
-index=1
+index=0
 
 while [ "$index" -lt 10 ]
 do
-    if [ "$index" -eq 4 ]
+    if [ "$index" -eq 3 ]
     then
         echo "bad luck"
-    elif [ "$index" -eq 8 ]
+    elif [ "$index" -eq 7 ]
     then
         echo "good luck"
     fi
