@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script displays "Best School" and "Hi" after the 9th iteration
+
+index=0
+
+while [ "$index" -lt 10 ]
+do
+    if [ "$index" -eq 9 ]
+        then
+            echo "Best School"
+            echo "Hi"
+        else
+            echo "Best School"
+        fi
+    (( index++ ))
+done
