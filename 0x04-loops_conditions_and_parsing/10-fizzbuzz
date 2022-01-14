@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 100 with "fizz" for multiples of 3, "buzz" for multiples of 5, and "fizzbuzz" for multiples of 3 and 5.
+
+index=1
+
+while [ "$index" -le 100 ]
+do
+    if [ $((index % 3)) -eq 0 ] && [ $((index % 5)) -eq 0 ]; then
+        echo "fizzbuzz"
+    elif [ $((index % 3)) -eq 0 ]; then
+        echo "fizz"
+    elif [ $((index % 5)) -eq 0 ]; then
+        echo "buzz"
+    else
+        echo "$index"
+    fi
+    index=$((index + 1))
+done
