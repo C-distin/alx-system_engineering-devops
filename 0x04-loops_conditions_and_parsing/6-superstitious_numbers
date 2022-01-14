@@ -3,7 +3,7 @@
 
 index=1
 
-while [ "$index" -lt 20 ]
+while [ "$index" -lt 21 ]
 do
     if [ "$index" -eq 4 ]
     then
