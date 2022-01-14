@@ -2,15 +2,15 @@
 # This script displays information about the "school" file
 
 if [ -e "school" ]; then
-    echo "The file exists"
+    echo "school file exists"
     if [ -s "school" ]; then
-        echo "The file is not empty"
+        echo "school file is empty"
     else
-        echo "The file is empty"
+        echo "school file is not empty"
     fi
     if [ -f "school" ]; then
-        echo "The file is a regular file"
+        echo "school is a regular file"
     fi
 else
-    echo "The file does not exist"
+    echo "school file does not exist"
 fi
