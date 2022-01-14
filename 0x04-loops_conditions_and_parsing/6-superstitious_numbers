@@ -5,20 +5,15 @@ index=1
 
 while [ "$index" -lt 21 ]
 do
-    if [ "$index" -eq 4 ]
-    then
-        echo "$index"
-        echo "bad luck from China"
-    elif [ "$index" -eq 9 ]
-    then
-        echo "$index"
-        echo "bad luck from Japan"
-    elif [ "$index" -eq 17 ]
-    then
-        echo "$index"
-        echo "bad luck from Italy"
-    else
-        echo "$index"
-    fi
-    (( index++ ))
+    echo "$index"
+    case "$index" in
+        4)
+            echo "bad luck from China"
+            ;;
+        9)
+            echo "bad luck from Japan"
+            ;;
+        17)
+            echo "bad luck from Italy"
+            ;;
 done
