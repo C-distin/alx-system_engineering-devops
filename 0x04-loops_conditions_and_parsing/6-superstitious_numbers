@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script displays the numbers 1 through 20, "bad luck from China" for the 4th iteration and "bad luck from Japan" for the 9th iteration and "bad luck from Italy" for the 17th iteration
+
+index=1
+
+while [ "$index" -lt 20 ]
+do
+    if [ "$index" -eq 4 ]
+    then
+        echo "bad luck from China"
+    elif [ "$index" -eq 9 ]
+    then
+        echo "bad luck from Japan"
+    elif [ "$index" -eq 17 ]
+    then
+        echo "bad luck from Italy"
+    else
+        echo "$index"
+    fi
+    (( index++ ))
+done
