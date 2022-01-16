@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script lists the PID of all Bash processes running on the system
 
-ps -aux | pgrep "bash"
+ps -aux | grep "bash"
