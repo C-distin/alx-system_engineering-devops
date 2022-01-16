@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script lists all processes running on the system
 
-ps -aux | grep "bash"
+ps -faux | less
