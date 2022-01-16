@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script stops displaying "To infinity and beyond"
+
+pkill -f "4-to infinity and beyond"
