@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script displays "To infinity and beyond" with "sleep 2" between each line and "I am invincible!" when recieving a "SIGTERM" signal
+
+msg()
+{
+    echo "I am invincible!"
+}
+trap "msg" SIGTERM
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
