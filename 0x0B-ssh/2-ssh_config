@@ -1,6 +1,10 @@
 # ssh client configuration to use private key "~/.ssh/school"
 # must refuse to authenticate using password
 
-Host 35.237.11.53
-	PasswordAuthentication no
-	IdentityFile ~/.ssh/school
+Host *
+ IgnoreUnknown AddKeysToAgent,UseKeychain
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+ IdentityFile ~/.ssh/school
+ PasswordAuthentication no
