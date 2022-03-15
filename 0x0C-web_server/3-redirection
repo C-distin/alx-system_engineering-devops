@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Installs, Configures and starts a new server
+
+apt-get update
+apt-get -y upgrade
+apt-get -y install nginx
+
+echo "Hello World!" > /var/www/html/index.html
+sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/twitter.com\/ataa_nkpa1 permanent;/g" /etc/nginx/sites-available/default
+
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+sed -i '45 i \\terror_page 404 /404.html;' /etc/nginx/sites-available/default
+service nginx restart

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# COnfigure nginx server with custom 404 page that contains the string `Ceci n'est pas une page`
+
+apt-get update
+apt-get -y upgrade
+apt-get -y install nginx
+
+echo "Hello World!" > /var/www/html/index.html
+sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/twitter.com\/ataa_nkpa1 permanent;/g" /etc/nginx/sites-available/default
+
