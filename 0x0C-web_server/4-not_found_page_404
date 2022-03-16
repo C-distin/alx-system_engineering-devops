@@ -5,5 +5,12 @@ apt-get update
 apt-get -y upgrade
 apt-get -y install nginx
 
-echo "Hello World!" > /var/www/html/index.html
-sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/twitter.com\/ataa_nkpa1 permanent;/g" /etc/nginx/sites-available/default
+301_REDIRECTION = "\\\tlocation /redirect_me {\n\t\t return 301 https://twitter.com/ataa_nkpa1;\n\t}\n"
+
+echo "Hello World!" > /usr/share/nginx/html/index.html
+sed -i "30i $301_REDIRECTION" /etc/nginx/sites-available/default
+
+
+echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+sed -i '45 i \\terror_page 404 /404.html;' /etc/nginx/sites-available/default
+service nginx restart
