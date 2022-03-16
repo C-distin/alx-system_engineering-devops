@@ -7,4 +7,3 @@ apt-get -y install nginx
 
 echo "Hello World!" > /var/www/html/index.html
 sed -ie "s/^server {$/server {\n\trewrite ^\/redirect_me https:\/\/twitter.com\/ataa_nkpa1 permanent;/g" /etc/nginx/sites-available/default
-
